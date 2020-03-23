@@ -1,0 +1,36 @@
+{
+  "name": "css-spec-colors",
+  "version": "1.0.0",
+  "description": "A JSON with all CSS color keywords and their corresponding values in hex, RGB and HSL. Color list generated from W3C spec (https://www.w3.org/TR/css-color-4/#named-colors).",
+  "main": "dist/colors.json",
+  "scripts": {
+    "build": "rimraf dist/* && node ./src/build.js"
+  },
+  "author": "Aarón García Hervás <aarongarciahervas@gmail.com> (https://aarongarciah.com)",
+  "license": "MIT",
+  "dependencies": {
+    "jsdom": "^16.2.1"
+  },
+  "engines": {
+    "node": "*"
+  },
+  "files": [
+    "dist/*"
+  ],
+  "keywords": [
+    "css",
+    "colors",
+    "svg",
+    "names",
+    "keywords"
+  ],
+  "devDependencies": {
+    "json": "^9.0.6",
+    "node-fetch": "^2.6.0",
+    "rimraf": "^3.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/aarongarciah/css-spec-colors.git"
+  }
+}

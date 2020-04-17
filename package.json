@@ -4,9 +4,7 @@
   "description": "A JSON with all CSS color keywords and their corresponding values in hex, RGB and HSL. Color list generated from W3C spec (https://www.w3.org/TR/css-color-4/#named-colors).",
   "main": "dist/colors.json",
   "scripts": {
-    "build": "rimraf dist/* && node ./src/build.js",
-    "prebuild:docs": "npm run build",
-    "build:docs": "cp dist/colors.json docs/colors.json"
+    "build": "rimraf dist/* && node ./src/build.js && cp dist/colors.json docs/colors.json"
   },
   "author": "Aarón García Hervás <aarongarciahervas@gmail.com> (https://aarongarciah.com)",
   "license": "MIT",

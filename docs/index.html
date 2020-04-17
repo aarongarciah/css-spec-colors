@@ -331,7 +331,7 @@
 
     <script>
       (async function () {
-        const response = await fetch('https://unpkg.com/css-spec-colors');
+        const response = await fetch('./colors.json');
         const colorsObj = await response.json();
         const colors = Object.values(colorsObj);
 
@@ -434,31 +434,33 @@
 
         // Generate color list markup
         function colorButtomMarkup(colorCode) {
-          return `<button class="button" type="button" data-color-button="${colorCode}" title="Click to copy">
-    <span class="button__inner">
-      <span class="button__text">${colorCode}</span>
-      ${clipboardIcon}
-    </span>
-  </button>`;
+          return `
+            <button class="button" type="button" data-color-button="${colorCode}" title="Click to copy">
+              <span class="button__inner">
+                <span class="button__text">${colorCode}</span>
+                ${clipboardIcon}
+              </span>
+            </button>
+          `;
         }
 
         function colorsMarkup(colors) {
           return colors
             .map(
               (color) => `
-        <li
-          class="item${isDarkColor(color.hex) ? ' item--dark' : ''}"
-          data-color-name="${color.name}"
-          style="background-color: ${color.hex};"
-        >
-          <div class="item__name">${color.name}</div>
-          <div class="item__buttons">
-            ${colorButtomMarkup(color.hex)}
-            ${colorButtomMarkup(color.rgb)}
-            ${colorButtomMarkup(color.hsl)}
-          </div>
-        </li>
-      `,
+                <li
+                  class="item${isDarkColor(color.hex) ? ' item--dark' : ''}"
+                  data-color-name="${color.name}"
+                  style="background-color: ${color.hex};"
+                >
+                  <div class="item__name">${color.name}</div>
+                  <div class="item__buttons">
+                    ${colorButtomMarkup(color.hex)}
+                    ${colorButtomMarkup(color.rgb)}
+                    ${colorButtomMarkup(color.hsl)}
+                  </div>
+                </li>
+              `,
             )
             .join('');
         }

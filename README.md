@@ -1,6 +1,8 @@
 # 🎨 css-spec-colors
 
+[![npm](https://badgen.net/npm/v/css-spec-colors)](https://www.npmjs.com/package/css-spec-colors)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+[![Known Vulnerabilities](https://snyk.io/test/github/aarongarciah/css-spec-colors/badge.svg?targetFile=package.json)](https://snyk.io/test/github/aarongarciah/css-spec-colors?targetFile=package.json)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/7c4bb19f-5cc8-4e39-8d0b-ec931ba4dcd6/deploy-status)](https://app.netlify.com/sites/css-spec-colors/deploys)
 
 A JSON with all CSS color keywords and their corresponding values in hex, RGB and HSL.
@@ -21,7 +23,7 @@ Or yarn:
 $ yarn add css-spec-colors
 ```
 
-You can also download the JSON file directly from https://css-spec-colors.netlify.app/colors.json without installing any dependency.
+You can also download the JSON file directly from https://unpkg.com/css-spec-colors without installing any dependency.
 
 ## Usage
 

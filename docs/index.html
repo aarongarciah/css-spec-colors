@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>CSS Spec Colors | Aarón García Hervás</title>
+    <meta
+      name="description"
+      content="A list of all CSS color keywords and their corresponding values in hex, RGB and HSL. Color list taken from W3C (https://www.w3.org/TR/css-color-4/#named-colors)"
+    />
+    <meta name="image" content="static/parcel-static-boilerplate.jpg" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="author"
+      content="Aarón García Hervás, @aarongarciah, https://aarongarciah.com"
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎨</text></svg>"
+    />
+    <meta itemprop="name" content="CSS Spec Colors" />
+    <meta
+      itemprop="description"
+      content="A list of all CSS color keywords and their corresponding values in hex, RGB and HSL. Color list taken from W3C (https://www.w3.org/TR/css-color-4/#named-colors)"
+    />
+    <meta property="og:title" content="CSS Spec Colors" />
+    <meta
+      property="og:description"
+      content="A list of all CSS color keywords and their corresponding values in hex, RGB and HSL. Color list taken from W3C (https://www.w3.org/TR/css-color-4/#named-colors)"
+    />
+    <meta property="og:url" content="http://css-spec-colors.netlify.app" />
+    <meta property="og:site_name" content="CSS Spec Colors" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="CSS Spec Colors" />
+    <meta
+      name="twitter:description"
+      content="A list of all CSS color keywords and their corresponding values in hex, RGB and HSL. Color list taken from W3C (https://www.w3.org/TR/css-color-4/#named-colors)"
+    />
+    <meta name="twitter:site" content="@aarongarciah" />
+    <meta name="twitter:creator" content="@aarongarciah" />
+    <style>
+      :root {
+        --spacing: 0.5rem;
+        --color-light: #fff;
+        --color-light-rgb: 255, 255, 255;
+        --color-dark: #000;
+        --color-dark-rgb: 0, 0, 0;
+        --color-primary: #18a0fb;
+        --color-grey: rgba(0, 0, 0, 0.1);
+      }
+
+      *,
+      *:before,
+      *:after {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: white;
+        color: black;
+        margin: 2rem;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+          'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+          'Helvetica Neue', sans-serif;
+      }
+
+      hr {
+        border: 0;
+        border-top: 1px solid black;
+      }
+
+      a {
+        color: var(--color-primary);
+      }
+
+      [hidden] {
+        display: none !important;
+      }
+
+      .container {
+        margin: 0 auto;
+        max-width: 64em;
+      }
+
+      .input {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 30px;
+        padding: var(--spacing) calc(var(--spacing) / 2) var(--spacing)
+          calc(var(--spacing) * 0.875);
+        border: 1px solid transparent;
+        border-radius: 2px;
+        outline: none;
+        margin: 1px 0 var(--spacing) 0;
+        overflow: visible;
+        font-family: 'Inter', sans-serif;
+        font-size: 11px;
+        line-height: 1.5;
+        font-weight: 400;
+        letter-spacing: 0.005em;
+        color: rgba(0, 0, 0, 0.8);
+        background-color: var(--color-light);
+      }
+
+      .input::selection {
+        color: var(--color-dark);
+        background-color: rgba(24, 145, 251, 0.3);
+      }
+
+      .input::-webkit-input-placeholder {
+        color: rgba(0, 0, 0, 0.3);
+        border: 1px solid transparent;
+      }
+
+      .input::placeholder {
+        color: rgba(0, 0, 0, 0.3);
+        border: 1px solid transparent;
+      }
+
+      .input:hover,
+      .input:valid {
+        color: rgba(0, 0, 0, 0.8);
+        border: 1px solid var(--color-grey);
+      }
+
+      .input:active,
+      .input:focus {
+        padding: var(--spacing) calc(var(--spacing) / 2) var(--spacing)
+          calc(var(--spacing) * 0.75);
+        color: var(--color-dark);
+        border: 2px solid var(--color-primary);
+        border-radius: 2px;
+      }
+
+      .input:disabled {
+        position: relative;
+        color: rgba(0, 0, 0, 0.3);
+      }
+
+      .input:not(:hover):placeholder-shown {
+        border: 1px solid transparent;
+        background-image: linear-gradient(
+          var(--color-grey),
+          var(--color-grey) 0
+        );
+        background-repeat: no-repeat;
+        background-position: center bottom -0.9px;
+        background-size: calc(100% - 10px) 1px;
+      }
+
+      .input:focus:placeholder-shown {
+        border: 2px solid var(--color-primary);
+      }
+
+      .input:focus:not(:placeholder-shown) {
+        padding-left: 6px;
+      }
+
+      .input:not(:placeholder-shown):invalid {
+        border-color: var(--color-danger);
+      }
+
+      .input:disabled:active {
+        padding: var(--spacing) calc(var(--spacing) / 2) var(--spacing)
+          calc(var(--spacing) * 0.875);
+      }
+
+      /* List */
+      .list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+        grid-gap: calc(var(--spacing) * 1.5);
+        padding: 0;
+        list-style: none;
+      }
+
+      .item {
+        color: var(--color-dark);
+        padding: var(--spacing);
+        border-radius: 2px;
+      }
+
+      .item--dark {
+        color: var(--color-light);
+      }
+
+      .item__name {
+        margin-bottom: var(--spacing);
+        font-weight: 500;
+      }
+
+      .item__buttons > * + * {
+        margin-top: calc(var(--spacing) * 0.5);
+      }
+
+      /* Button */
+      .button {
+        display: block;
+        width: 100%;
+        padding: 0;
+        border: 1px solid rgba(var(--color-dark-rgb), 0.12);
+        border-radius: 2px;
+        outline: none;
+        font-family: monospace;
+        font-size: 11px;
+        line-height: 1;
+        font-weight: 400;
+        color: currentColor;
+        white-space: nowrap;
+        word-break: keep-all;
+        text-decoration: none;
+        text-align: left;
+        background-color: rgba(var(--color-dark-rgb), 0.02);
+      }
+
+      .item--dark .button {
+        border-color: rgba(var(--color-light-rgb), 0.3);
+        background-color: rgba(var(--color-light-rgb), 0.12);
+      }
+
+      .button__inner {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: calc(var(--spacing) / 2) 0 calc(var(--spacing) / 2)
+          calc(var(--spacing) / 2);
+      }
+
+      .button__icon {
+        display: inline-block;
+        width: 1.4em;
+        height: 1.4em;
+        margin-right: 0.2em;
+      }
+
+      .button:hover,
+      .button:focus,
+      .button:active {
+        border-color: rgba(var(--color-dark-rgb), 0.3);
+        background-color: rgba(var(--color-dark-rgb), 0.03);
+      }
+
+      .item--dark .button:hover,
+      .item--dark .button:focus,
+      .item--dark .button:active {
+        border-color: rgba(var(--color-light-rgb), 0.4);
+        background-color: rgba(var(--color-light-rgb), 0.2);
+      }
+
+      .button > * {
+        pointer-events: none;
+      }
+
+      .notfound {
+        margin: 0;
+      }
+
+      .red {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <svg aria-hidden="true" hidden>
+      <defs>
+        <g
+          id="clipboard-icon"
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path
+            d="M16 4h2a2 2 0 012 2v14a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h2"
+          />
+          <rect x="8" y="2" width="8" height="4" rx="1" ry="1" />
+        </g>
+      </defs>
+    </svg>
+
+    <main class="container">
+      <h1>CSS Spec Colors</h1>
+      <p>
+        A list of all CSS color keywords and their corresponding values in hex,
+        RGB and HSL.
+        <a href="https://www.w3.org/TR/css-color-4/#named-colors"
+          >Color list taken from W3C</a
+        >.
+      </p>
+      <p>
+        Repo with installation and usage instructions on
+        <a href="https://github.com/aarongarciah/css-spec-colors">Github</a>.
+      </p>
+      <p>
+        The JSON is published as a package on
+        <a href="https://www.npmjs.com/package/css-spec-colors">npm</a> or can
+        be accessed via <a href="https://unpkg.com/css-spec-colors">unpkg</a> or
+        <a href="https://css-spec-colors.netlify.app/colors.json">Netlify</a>.
+      </p>
+
+      <form action="" accept-charset="utf-8" novalidate>
+        <input
+          class="input"
+          type="text"
+          value=""
+          placeholder="Enter a color name"
+          autocorrect="off"
+          autocapitalize="off"
+          spellcheck="false"
+          required
+          autofocus
+        />
+      </form>
+      <p class="notfound" hidden>No color matching that name</p>
+      <ul class="list"></ul>
+
+      <hr />
+
+      Made with <span class="red" aria-label="love">♥️</span> by
+      <a href="https://twitter.com/aarongarciah">Aarón García Hervás</a>
+    </main>
+
+    <script>
+      (async function () {
+        const response = await fetch('https://unpkg.com/css-spec-colors');
+        const colorsObj = await response.json();
+        const colors = Object.values(colorsObj);
+
+        const $input = document.querySelector('.input');
+        const $list = document.querySelector('.list');
+        const $form = document.querySelector('form');
+        const $notfound = document.querySelector('.notfound');
+        const clipboardIcon = `<svg class="button__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <use xlink:href="#clipboard-icon"/>
+</svg>`;
+
+        // Source: https://awik.io/determine-color-bright-dark-using-javascript/
+        function isDarkColor(color) {
+          // Variables for red, green, blue values
+          var r, g, b, hsp;
+
+          // Check the format of the color, HEX or RGB?
+          if (color.match(/^rgb/)) {
+            // If HEX --> store the red, green, blue values in separate variables
+            color = color.match(
+              /^rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*(\d+(?:\.\d+)?))?\)$/,
+            );
+
+            r = color[1];
+            g = color[2];
+            b = color[3];
+          } else {
+            // If RGB --> Convert it to HEX: http://gist.github.com/983661
+            color = +(
+              '0x' + color.slice(1).replace(color.length < 5 && /./g, '$&$&')
+            );
+
+            r = color >> 16;
+            g = (color >> 8) & 255;
+            b = color & 255;
+          }
+
+          // HSP (Highly Sensitive Poo) equation from http://alienryderflex.com/hsp.html
+          hsp = Math.sqrt(0.299 * (r * r) + 0.587 * (g * g) + 0.114 * (b * b));
+
+          // Using the HSP value, determine whether the color is light or dark
+          return !(hsp > 127.5);
+        }
+
+        // Source: https://github.com/feross/clipboard-copy/blob/e23f6137ad26a6b6929944173bd915acbbf09db4/index.js
+        function clipboardCopy(text) {
+          // Use the Async Clipboard API when available. Requires a secure browsing
+          // context (i.e. HTTPS)
+          if (navigator.clipboard) {
+            return navigator.clipboard.writeText(text).catch(function (err) {
+              throw err !== undefined
+                ? err
+                : new DOMException(
+                    'The request is not allowed',
+                    'NotAllowedError',
+                  );
+            });
+          }
+
+          // ...Otherwise, use document.execCommand() fallback
+
+          // Put the text to copy into a <span>
+          var span = document.createElement('span');
+          span.textContent = text;
+
+          // Preserve consecutive spaces and newlines
+          span.style.whiteSpace = 'pre';
+
+          // Add the <span> to the page
+          document.body.appendChild(span);
+
+          // Make a selection object representing the range of text selected by the user
+          var selection = window.getSelection();
+          var range = window.document.createRange();
+          selection.removeAllRanges();
+          range.selectNode(span);
+          selection.addRange(range);
+
+          // Copy text to the clipboard
+          var success = false;
+          try {
+            success = window.document.execCommand('copy');
+          } catch (err) {
+            console.log('error', err);
+          }
+
+          // Cleanup
+          selection.removeAllRanges();
+          window.document.body.removeChild(span);
+
+          return success
+            ? Promise.resolve()
+            : Promise.reject(
+                new DOMException(
+                  'The request is not allowed',
+                  'NotAllowedError',
+                ),
+              );
+        }
+
+        // Generate color list markup
+        function colorButtomMarkup(colorCode) {
+          return `<button class="button" type="button" data-color-button="${colorCode}" title="Click to copy">
+    <span class="button__inner">
+      <span class="button__text">${colorCode}</span>
+      ${clipboardIcon}
+    </span>
+  </button>`;
+        }
+
+        function colorsMarkup(colors) {
+          return colors
+            .map(
+              (color) => `
+        <li
+          class="item${isDarkColor(color.hex) ? ' item--dark' : ''}"
+          data-color-name="${color.name}"
+          style="background-color: ${color.hex};"
+        >
+          <div class="item__name">${color.name}</div>
+          <div class="item__buttons">
+            ${colorButtomMarkup(color.hex)}
+            ${colorButtomMarkup(color.rgb)}
+            ${colorButtomMarkup(color.hsl)}
+          </div>
+        </li>
+      `,
+            )
+            .join('');
+        }
+
+        // Attach event listeners (for this specific demo)
+        function listeners() {
+          $input.addEventListener('input', function (event) {
+            const target = event.target;
+            const value = target.value.trim();
+
+            if (!$list) {
+              return;
+            }
+
+            if (!value) {
+              $list.innerHTML = colorsMarkup(colors);
+            }
+
+            const filteredColors = colors.filter((color) =>
+              color.name.includes(value),
+            );
+
+            $list.innerHTML = colorsMarkup(filteredColors);
+
+            if (filteredColors.length) {
+              $notfound.setAttribute('hidden', 'hidden');
+            } else {
+              $notfound.removeAttribute('hidden');
+            }
+          });
+
+          document.addEventListener(
+            'click',
+            function (event) {
+              const target = event.target;
+              const colorValue = target.getAttribute('data-color-button');
+
+              if (colorValue) {
+                clipboardCopy(colorValue).then(() => {
+                  const $text = target.querySelector('.button__text');
+
+                  if (!$text) {
+                    return;
+                  }
+
+                  const buttonText = $text.innerText;
+                  $text.innerText = 'Copied!';
+
+                  setTimeout(() => {
+                    if ($text) {
+                      $text.innerText = buttonText;
+                    }
+                  }, 1000);
+                });
+              }
+            },
+            true,
+          );
+
+          $form.addEventListener('submit', function (event) {
+            event.preventDefault();
+          });
+        }
+
+        // Check if necessary DOM elements are in place
+        if (!$input || !$list || !$form || !$notfound) {
+          console.error("Required DOM elements don't exist");
+          return;
+        }
+
+        // Populate list of colors
+        $list.innerHTML = colorsMarkup(colors);
+
+        // Initialize all the things
+        listeners();
+      })();
+    </script>
+  </body>
+</html>

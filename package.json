@@ -8,9 +8,6 @@
   },
   "author": "Aarón García Hervás <aarongarciahervas@gmail.com> (https://aarongarciah.com)",
   "license": "MIT",
-  "dependencies": {
-    "jsdom": "^16.2.1"
-  },
   "engines": {
     "node": "*"
   },
@@ -25,9 +22,7 @@
     "keywords"
   ],
   "devDependencies": {
-    "clipboard-copy": "^3.1.0",
-    "is-dark-color": "^1.2.0",
-    "json": "^9.0.6",
+    "jsdom": "^16.2.2",
     "node-fetch": "^2.6.0",
     "rimraf": "^3.0.2"
   },

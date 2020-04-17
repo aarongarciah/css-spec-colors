@@ -1,4 +1,7 @@
-# css-spec-colors
+# 🎨 css-spec-colors
+
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/7c4bb19f-5cc8-4e39-8d0b-ec931ba4dcd6/deploy-status)](https://app.netlify.com/sites/css-spec-colors/deploys)
 
 A JSON with all CSS color keywords and their corresponding values in hex, RGB and HSL.
 
@@ -12,13 +15,17 @@ Using npm:
 $ npm install css-spec-colors
 ```
 
-Using yarn:
+Or yarn:
 
 ```bash
 $ yarn add css-spec-colors
 ```
 
+You can also download the JSON file directly from https://css-spec-colors.netlify.app/colors.json without installing any dependency.
+
 ## Usage
+
+> Colors are sorted alphabetically
 
 ```javascript
 import colors from 'css-spec-colors'; // or const colors = require('css-spec-colors');
@@ -64,8 +71,10 @@ console.log(colors.aliceblue.rgb); // 'rgb(255, 0, 0)'
 console.log(colors.aliceblue.hsl); // 'hsl(0, 100%, 50%)'
 ```
 
-Colors are sorted alphabetically.
-
 ## License
 
-MIT &copy; [Aarón García](https://aarongarciah.com)
+MIT
+
+---
+
+Made with ♥️ by [Aarón García Hervás](https://aarongarciah.com)

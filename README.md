@@ -23,7 +23,7 @@ Or yarn:
 $ yarn add css-spec-colors
 ```
 
-You can also download the JSON file directly from https://unpkg.com/css-spec-colors without installing any dependency.
+You can also download the JSON file directly from [unpkg](https://unpkg.com/css-spec-colors) or [Netlify](https://css-spec-colors.netlify.app/colors.json) without installing any dependency.
 
 ## Usage
 

@@ -1,10 +1,8 @@
-const fs = require('fs');
-const path = require('path');
-const fetch = require('node-fetch');
-const jsdom = require('jsdom');
-const { hexToRGB, hexToHSL } = require('./utils');
+import fs from 'fs';
+import path from 'path';
+import { JSDOM } from 'jsdom';
+import { hexToRGB, hexToHSL } from './utils.mjs';
 
-const { JSDOM } = jsdom;
 const url = 'https://www.w3.org/TR/css-color-4/#named-colors';
 
 /**
@@ -18,7 +16,7 @@ function colorObject(name, hex) {
     name,
     hex,
     rgb: hexToRGB(hex),
-    hsl: hexToHSL(hex)
+    hsl: hexToHSL(hex),
   };
 }
 
@@ -28,7 +26,7 @@ function colorObject(name, hex) {
  * @return {string} The string sanitized
  */
 function sanitizeString(str) {
-  return str.replace(/(\r\n(\s*)+|\n(\s*)+|\r(\s*)+|(\s*)+)/gm, '')
+  return str.replace(/(\r\n(\s*)+|\n(\s*)+|\r(\s*)+|(\s*)+)/gm, '');
 }
 
 /**
@@ -52,7 +50,9 @@ async function getColors() {
     console.info(`🎨 Fetching ${url}`);
     response = await fetch(url);
   } catch (error) {
-    throw new Error(`🎨 ERROR: Couldn't connet to the source URL. Check that ${url} is alive.`);
+    throw new Error(
+      `🎨 ERROR: Couldn't connet to the source URL. Check that ${url} is alive.`,
+    );
   }
 
   const text = await response.text();
@@ -62,7 +62,9 @@ async function getColors() {
   const table = document.querySelector(tableSelector);
 
   if (!table) {
-    throw new Error(`🎨 ERROR: Couldn't find \`${tableSelector}\` in ${url}. Check that exists.`);
+    throw new Error(
+      `🎨 ERROR: Couldn't find \`${tableSelector}\` in ${url}. Check that exists.`,
+    );
   }
 
   console.info(`🎨 Generating colors`);
@@ -97,11 +99,8 @@ async function getColors() {
 
   try {
     console.info(`🎨 Writing colors to ${jsonPath}`);
-    fs.writeFileSync(jsonPath, JSON.stringify(colors))
+    fs.writeFileSync(jsonPath, JSON.stringify(colors));
   } catch (err) {
     throw new Error(`🎨 ERROR: Couldn't write the data to ${jsonPath}.`);
   }
 })();
-
-
-
